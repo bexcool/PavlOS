@@ -1,0 +1,216 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {},
+    ".NETCoreApp,Version=v5.0/": {
+      "PavlOS/1.0.0": {
+        "dependencies": {
+          "Mosa.External.x86": "1.0.0.0",
+          "Mosa.Kernel.x86": "1.0.0.0",
+          "Mosa.Platform.x86": "1.0.0.0",
+          "Mosa.Plug.Korlib": "1.0.0.0",
+          "Mosa.Plug.Korlib.x86": "1.0.0.0",
+          "Mosa.Runtime": "1.0.0.0",
+          "Mosa.Runtime.x86": "1.0.0.0",
+          "mscorlib": "1.0.0.0"
+        },
+        "runtime": {
+          "PavlOS.dll": {}
+        }
+      },
+      "Mosa.External.x86/1.0.0.0": {
+        "runtime": {
+          "Mosa.External.x86.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Kernel.x86/1.0.0.0": {
+        "runtime": {
+          "Mosa.Kernel.x86.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Platform.x86/1.0.0.0": {
+        "runtime": {
+          "Mosa.Platform.x86.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Plug.Korlib/1.0.0.0": {
+        "runtime": {
+          "Mosa.Plug.Korlib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Plug.Korlib.x86/1.0.0.0": {
+        "runtime": {
+          "Mosa.Plug.Korlib.x86.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Runtime/1.0.0.0": {
+        "runtime": {
+          "Mosa.Runtime.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Runtime.x86/1.0.0.0": {
+        "runtime": {
+          "Mosa.Runtime.x86.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "mscorlib/1.0.0.0": {
+        "runtime": {
+          "mscorlib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Compiler.Framework/1.0.0.0": {
+        "runtime": {
+          "Mosa.Compiler.Framework.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Platform.Intel/1.0.0.0": {
+        "runtime": {
+          "Mosa.Platform.Intel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Compiler.MosaTypeSystem/1.0.0.0": {
+        "runtime": {
+          "Mosa.Compiler.MosaTypeSystem.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Mosa.Compiler.Common/1.0.0.0": {
+        "runtime": {
+          "Mosa.Compiler.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "dnlib/3.3.2.0": {
+        "runtime": {
+          "dnlib.dll": {
+            "assemblyVersion": "3.3.2.0",
+            "fileVersion": "3.3.2.0"
+          }
+        }
+      },
+      "PriorityQueue/5.0.0.0": {
+        "runtime": {
+          "PriorityQueue.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PavlOS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.External.x86/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Kernel.x86/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Platform.x86/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Plug.Korlib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Plug.Korlib.x86/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Runtime/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Runtime.x86/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "mscorlib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Compiler.Framework/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Platform.Intel/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Compiler.MosaTypeSystem/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mosa.Compiler.Common/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dnlib/3.3.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PriorityQueue/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

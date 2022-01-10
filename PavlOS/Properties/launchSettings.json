@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Compile and Run": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\MOSA-Core\\bin\\Mosa.Launcher.Console.exe",
+      "commandLineArgs": "PavlOS.dll",
+      "workingDirectory": "bin"
+    }
+  }
+}

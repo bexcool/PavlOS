@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<OutputType>WinExe</OutputType>
+		<StartupObject>PavlOS.Core.System</StartupObject>
+		<DebugType>full</DebugType>
+		<LangVersion>8.0</LangVersion>
+		<OutputPath>bin\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<DisableStandardFrameworkResolution>true</DisableStandardFrameworkResolution>
+		<DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoStdLib>true</NoStdLib>
+		<ApplicationIcon />
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="mscorlib">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\mscorlib.dll</HintPath>
+    	</Reference>
+		<Reference Include="Mosa.Kernel.x86">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.Kernel.x86.dll</HintPath>
+    	</Reference>
+		<Reference Include="Mosa.Platform.x86">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.Platform.x86.dll</HintPath>
+    	</Reference>
+		<Reference Include="Mosa.Runtime">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.Runtime.dll</HintPath>
+    	</Reference>
+		<Reference Include="Mosa.External.x86">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.External.x86.dll</HintPath>
+    	</Reference>
+    	<Reference Include="Mosa.Plug.Korlib">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.Plug.Korlib.dll</HintPath>
+    	</Reference>
+    	<Reference Include="Mosa.Plug.Korlib.x86">
+      		<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.Plug.Korlib.x86.dll</HintPath>
+    	</Reference>
+		<Reference Include="Mosa.Runtime.x86">
+			<HintPath>C:\Program Files\MOSA-Core\bin\Mosa.Runtime.x86.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Core\Executable\Application\" />
+	</ItemGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<StartAction>Program</StartAction>
+		<StartProgram>C:\Users\Santa\AppData\Roaming\MOSA-Core\bin\Mosa.Launcher.Console.exe</StartProgram>
+		<StartArguments>PavlOS.dll</StartArguments>
+	</PropertyGroup>
+</Project>
