@@ -95,12 +95,11 @@ namespace PavlOS.Core
             int test = 0;
 
             TestWindow window = new TestWindow();
-            /*
             window.X = 200;
             window.Y = 300;
             window.Width = 200;
             window.Height = 100;
-            */
+            
             Label label = new Label();
             label.X = 300;
             label.Y = 20;
