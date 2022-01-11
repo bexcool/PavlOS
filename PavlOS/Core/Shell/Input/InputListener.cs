@@ -2,17 +2,20 @@
 using Mosa.External.x86.Driver.Input;
 using PavlOS.Core.Shell;
 using PavlOS.Core.Shell.Controls.Base;
+using PavlOS_Dev.Core.Shell.Controls.Base;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace PavlOS.Core
 {
-    public static class InputListener
+    public class InputListener
     {
         public static bool LeftMousePressed;
+        private Point LastMousePos;
 
-        public static void CheckInput()
+        public void CheckInput()
         {
             foreach (Control control in ShellCore.AllControls)
             {
@@ -37,6 +40,15 @@ namespace PavlOS.Core
                     {
                         control.Pressed = true;
                         control._MousePressed();
+
+                        if (control is Window) (control as Window).MouseDelta = new Point(PS2Mouse.X - control.X, PS2Mouse.Y - control.Y);
+                    }
+
+                    if (control.Pressed && control is Window)
+                    {
+
+                        control.X = PS2Mouse.X - (control as Window).MouseDelta.X;
+                        control.Y = PS2Mouse.Y - (control as Window).MouseDelta.Y;
                     }
                 }
                 else
@@ -70,6 +82,7 @@ namespace PavlOS.Core
                 }
             }
 
+            LastMousePos = new Point(PS2Mouse.X - 1, PS2Mouse.Y - 1);
             LeftMousePressed = PS2Mouse.MouseStatus == MouseStatus.Left;
         }
     }

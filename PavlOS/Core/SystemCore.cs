@@ -88,6 +88,7 @@ namespace PavlOS.Core
             // Make sure you've already enabled VMSVGA(in VirtualBox) or VBE(in Run.bat)
 
             Renderer ShellRenderer = new Renderer();
+            InputListener ShellInputListener = new InputListener();
             GraphicsDriver.Init(640, 480);
             ShellRenderer.Init();
             PS2Mouse.Initialize(GraphicsDriver.Width, GraphicsDriver.Height);
@@ -95,12 +96,12 @@ namespace PavlOS.Core
             int test = 0;
 
             TestWindow window = new TestWindow();
-            /*
+            
             window.X = 200;
             window.Y = 300;
             window.Width = 200;
             window.Height = 100;
-            */
+            
             Label label = new Label();
             label.X = 300;
             label.Y = 20;
@@ -140,7 +141,7 @@ namespace PavlOS.Core
             {
                 if (!Panicked)
                 {
-                    InputListener.CheckInput();
+                    ShellInputListener.CheckInput();
                     ShellRenderer.Render();
                     FPSMeter.Update();
                 }
@@ -160,7 +161,7 @@ namespace PavlOS.Core
                 Done = true;
                 while (ID.Length < Size + 1)
                     ID += (char)new Random().Next(48, 90);
-                /*
+                
                 foreach (Window window in ShellCore.AllWindows)
                 {
                     if (window.Handle == ID)
@@ -168,7 +169,7 @@ namespace PavlOS.Core
                         Done = false;
                         break;
                     }
-                }*/
+                }
             }
             return ID;
         }

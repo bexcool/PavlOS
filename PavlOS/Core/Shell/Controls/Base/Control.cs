@@ -183,10 +183,10 @@ namespace PavlOS.Core.Shell.Controls.Base
             }
         }
 
-        internal bool ValueChanged = false, ChangingByCore = false, RemoveRequest = false, ParentChanged = false, BlankApplied = true;
+        public bool ValueChanged = false, ChangingByCore = false, RemoveRequest = false, ParentChanged = false, BlankApplied = true;
         public bool Hovered = false, Pressed = false;
 
-        internal Rectangle Old;
+        public Rectangle Old;
 
         #region Event handlers
         // Click handler
@@ -220,7 +220,7 @@ namespace PavlOS.Core.Shell.Controls.Base
         }
 
         // Called when any value changes
-        internal void _ValueChanged()
+        public void _ValueChanged()
         {
             if (!ValueChanged)
             {
@@ -232,44 +232,44 @@ namespace PavlOS.Core.Shell.Controls.Base
         }
 
         // Events
-        internal void _OnClick()
+        public void _OnClick()
         {
             if (OnClick == null) return;
 
             OnClick(this);
         }
-        internal void _MouseEnter()
+        public void _MouseEnter()
         {
             if (MouseEnter == null) return;
 
             MouseEnter(this);
         }
-        internal void _MouseLeave()
+        public void _MouseLeave()
         {
             if (MouseLeave == null) return;
 
             MouseLeave(this);
         }
-        internal void _MousePressed()
+        public void _MousePressed()
         {
             if (MousePressed == null) return;
 
             MousePressed(this);
         }
-        internal void _MouseReleased()
+        public void _MouseReleased()
         {
 
             if (MouseReleased == null) return;
 
             MouseReleased(this);
         }
-        internal void _Focused()
+        public void _Focused()
         {
             if (Focused == null) return;
 
             Focused(this);
         }
-        internal void _ContentChanged()
+        public void _ContentChanged()
         {
             if (ContentChanged == null) return;
 
