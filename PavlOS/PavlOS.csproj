@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<OutputType>WinExe</OutputType>
-		<StartupObject>PavlOS.Core.System</StartupObject>
+		<StartupObject>PavlOS.Core.SystemCore</StartupObject>
 		<DebugType>full</DebugType>
 		<LangVersion>8.0</LangVersion>
 		<OutputPath>bin\</OutputPath>

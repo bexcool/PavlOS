@@ -11,8 +11,10 @@ using PavlOS.Core.Shell;
 using PavlOS.Core.Shell.Controls;
 using PavlOS.Core.Shell.Controls.Base;
 using PavlOS.Core.Shell.Rendering;
+using PavlOS.Core.System32.AppExe.TestApplication;
 using PavlOS.Core.Utility;
 using PavlOS_Dev.Core.Shell.Controls;
+using PavlOS_Dev.Core.Shell.Controls.Base;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -24,7 +26,7 @@ using Convert = Mosa.External.x86.Convert;
 
 namespace PavlOS.Core
 {
-    public static class System
+    public static class SystemCore
     {
         public static bool Panicked = false;
 
@@ -92,12 +94,13 @@ namespace PavlOS.Core
 
             int test = 0;
 
-            Window window = new Window();
+            TestWindow window = new TestWindow();
+            /*
             window.X = 200;
             window.Y = 300;
             window.Width = 200;
             window.Height = 100;
-
+            */
             Label label = new Label();
             label.X = 300;
             label.Y = 20;
@@ -125,7 +128,7 @@ namespace PavlOS.Core
             {
                 test--;
                 label.Content = test.ToString();
-                window.Center();
+                //window.Center();
             };
 
             //string CustomCharset = "0123456789A¡BC»∆DœEÃ…FGHIÕJKLMN“O”PQRÿSäTçU⁄ŸVWXY›Zéa·bcÊËdÔeÈÏfghiÌjklmnÚoÛpqr¯sötùu˙˘vwxy˝zû";
@@ -157,7 +160,7 @@ namespace PavlOS.Core
                 Done = true;
                 while (ID.Length < Size + 1)
                     ID += (char)new Random().Next(48, 90);
-
+                /*
                 foreach (Window window in ShellCore.AllWindows)
                 {
                     if (window.Handle == ID)
@@ -165,7 +168,7 @@ namespace PavlOS.Core
                         Done = false;
                         break;
                     }
-                }
+                }*/
             }
             return ID;
         }

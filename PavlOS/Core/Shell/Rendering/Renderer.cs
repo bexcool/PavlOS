@@ -20,6 +20,7 @@ using Mosa.External.x86.Driver.Input;
 using Convert = Mosa.External.x86.Convert;
 using Mosa.Kernel.x86;
 using PavlOS_Dev.Core.Shell.Controls;
+using PavlOS_Dev.Core.Shell.Controls.Base;
 
 namespace PavlOS.Core.Shell.Rendering
 {
@@ -81,7 +82,6 @@ namespace PavlOS.Core.Shell.Rendering
                 }
                 else if (control is Button)
                 {
-
                     Button button = control as Button;
 
                     if (control.Pressed && PS2Mouse.MouseStatus == MouseStatus.Left)
@@ -115,9 +115,11 @@ namespace PavlOS.Core.Shell.Rendering
                 control.ChangingByCore = false;
             }
             
-            // Draw windows
+            // Draw Windows
             foreach (Window window in ShellCore.AllWindows)
             {
+                GraphicsDriver.Graphics.DrawBitFontString("ArialCustomCharset16", Color.Black.ToArgb(), ShellCore.AllWindows.Count.ToString() + " X " + window.X + " I  Y " + window.Y + " I  Width " + window.Width, (int)window.X + 6, (int)window.Y + 6, false);
+
                 // Rendering window
                 GraphicsDriver.Graphics.DrawHorizontalLine(Color.White.ToArgb(), window.Width - 1, window.X, window.Y); // White horizontal
                 GraphicsDriver.Graphics.DrawHorizontalLine(Color.FromArgb(223, 223, 223).ToArgb(), window.Width - 3, window.X + 1, window.Y + 1); // Gray inside horizontal
@@ -128,10 +130,10 @@ namespace PavlOS.Core.Shell.Rendering
                 GraphicsDriver.Graphics.DrawVerticalLine(Color.Black.ToArgb(), window.Height - 1, window.X + window.Width - 1, window.Y); // Black vertical
                 GraphicsDriver.Graphics.DrawVerticalLine(Color.FromArgb(128, 128, 128).ToArgb(), window.Height - 3, window.X + window.Width - 2, window.Y + 1); // Dark gray vertical
                 GraphicsDriver.Graphics.DrawFilledRectangle(Color.FromArgb(180, 180, 180).ToArgb(), window.X + 2, window.Y + 2, window.Width - 4, window.Height - 4); // Fill
-                /*
+                
                 // Rendering title
-                GraphicsDriver.Graphics.DrawFilledRectangle(0x1083cf, window.X + 3, window.Y, window.Width - 6, 15);
-                if (!string.IsNullOrEmpty(window.Title)) GraphicsDriver.Graphics.DrawBitFontString("ArialCustomCharset16", Color.Black.ToArgb(), window.Title, (int)window.X + 6, (int)window.Y + 6, false);*/
+                GraphicsDriver.Graphics.DrawFilledRectangle(Color.FromArgb(16, 131, 207).ToArgb(), window.X + 3, window.Y, window.Width - 6, 15);
+                if (!string.IsNullOrEmpty(window.Title)) GraphicsDriver.Graphics.DrawBitFontString("ArialCustomCharset16", Color.Black.ToArgb(), window.Title, (int)window.X + 6, (int)window.Y + 6, false);
             }
 
             GraphicsDriver.Graphics.DrawImage(IconGallery.BMP_Sys_Acorn, 100, 400, true);

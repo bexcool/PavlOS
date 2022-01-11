@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Text;
 using static PavlOS.Core.Shell.Utility.Utility;
 
-namespace PavlOS_Dev.Core.Shell.Controls
+namespace PavlOS_Dev.Core.Shell.Controls.Base
 {
     public class Window
     {
@@ -37,7 +37,7 @@ namespace PavlOS_Dev.Core.Shell.Controls
             }
         }
 
-        private int _Width = 1;
+        private int _Width = 350;
         public int Width
         {
             get { return _Width; }
@@ -49,7 +49,7 @@ namespace PavlOS_Dev.Core.Shell.Controls
             }
         }
 
-        private int _Height = 1;
+        private int _Height = 100;
         public int Height
         {
             get { return _Height; }
@@ -182,7 +182,7 @@ namespace PavlOS_Dev.Core.Shell.Controls
         #endregion
         public Window()
         {
-            Handle = SystemUtilities.GenerateID(20);
+            //Handle = SystemUtilities.GenerateID(20);
 
             BackgroundColor = Color.White;
             Title = "New Window";
