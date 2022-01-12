@@ -17,6 +17,10 @@ namespace PavlOS_Dev.Core.Shell.Controls.Base
         public Color BackgroundColor { get; set; }
         public string Handle { get; private set; }
         public Point MouseDelta;
+        public bool WindowDrag = false;
+
+        // Children (controls)
+        public List<Control> Controls = new List<Control>();
 
         // Title bar
         public string Title { get; set; }
@@ -33,7 +37,7 @@ namespace PavlOS_Dev.Core.Shell.Controls.Base
             Width = 200;
             Height = 100;
 
-            ShellCore.AddControl(this);
+            ShellCore.AddWindow(this);
         }
 
         public void Center()
@@ -41,5 +45,8 @@ namespace PavlOS_Dev.Core.Shell.Controls.Base
             X = GraphicsDriver.Width / 2 - Width / 2;
             Y = GraphicsDriver.Height / 2 - Height / 2;
         }
+
+        public void AddControl(Control Control) => Controls.Add(Control);
+        public void RemoveControl(Control Control) => Controls.Remove(Control);
     }
 }

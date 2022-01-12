@@ -9,14 +9,10 @@ namespace PavlOS.Core.Shell
 {
     public static class ShellCore
     {
-        // Window elements
-        public static List<Control> AllControls = new List<Control>();
         // Windows
-        public static List<Window> AllWindows = new List<Window>();
+        public static List<Control> AllWindows = new List<Control>();
 
-        public static void AddControl(Control Control) => AllControls.Add(Control);
-        public static void RemoveControl(Control Control) => AllControls.Remove(Control);
-        public static void AddWindow(Window Window) => AllWindows.Add(Window);
-        public static void RemoveWindow(Window Window) => AllWindows.Remove(Window);
+        public static void AddWindow(Control Control) => AllWindows.Add(Control);
+        public static void RemoveWindow(Control Control) => AllWindows.Remove(Control);
     }
 }

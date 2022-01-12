@@ -132,8 +132,8 @@ namespace PavlOS.Core.Shell.Controls.Base
             }
         }
 
-        private ConsoleColor _ForegroundColor = ConsoleColor.White;
-        public ConsoleColor ForegroundColor
+        private Color _ForegroundColor = Color.Black;
+        public Color ForegroundColor
         {
             get { return _ForegroundColor; }
 
@@ -215,8 +215,6 @@ namespace PavlOS.Core.Shell.Controls.Base
         public Control()
         {
             Old = new Rectangle(X, Y, CalculateActualWidth(), CalculateActualHeight());
-
-            ShellCore.AddControl(this);
         }
 
         // Called when any value changes
@@ -282,7 +280,7 @@ namespace PavlOS.Core.Shell.Controls.Base
         /// </summary>
         public void Remove()
         {
-            ShellCore.RemoveControl(this);
+            ShellCore.RemoveWindow(this);
         }
 
         /// <summary>

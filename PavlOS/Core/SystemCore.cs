@@ -103,10 +103,13 @@ namespace PavlOS.Core
             window.Height = 100;
             
             Label label = new Label();
-            label.X = 300;
+            label.X = 75;
             label.Y = 20;
+            label.ForegroundColor = Color.Black;
             label.Content = "I am a label.";
 
+            window.AddControl(label);
+            /*
             Button button = new Button();
             button.X = 300;
             button.Y = 100;
@@ -118,10 +121,24 @@ namespace PavlOS.Core
                 test++;
                 label.Content = test.ToString();
             };
+            */
+            Button button = new Button();
+            button.X = 10;
+            button.Y = 10;
+            button.Width = 60;
+            button.Height = 30;
+            button.Content = "Click me!";
+            button.OnClick += (o) =>
+            {
+                test++;
+                label.Content = test.ToString();
+            };
+
+            window.AddControl(button);
 
             Button minus = new Button();
-            minus.X = 400;
-            minus.Y = 100;
+            minus.X = 10;
+            minus.Y = 45;
             minus.Width = 60;
             minus.Height = 30;
             minus.Content = "Minus";
@@ -131,6 +148,8 @@ namespace PavlOS.Core
                 label.Content = test.ToString();
                 //window.Center();
             };
+
+            window.AddControl(minus);
 
             //string CustomCharset = "0123456789A�BC��D�E��FGHI�JKLMN�O�PQR�S�T�U��VWXY�Z�a�bc��d�e��fghi�jklmn�o�pqr�s�t�u��vwxy�z�";
             string CustomCharset = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

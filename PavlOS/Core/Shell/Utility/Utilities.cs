@@ -4,6 +4,7 @@ using PavlOS.Core.Shell.Rendering.FontRendering;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -29,16 +30,16 @@ namespace PavlOS.Core.Shell.Utility
             KEYWORDS_CS = "abstract,event,new,struct,as,explicit,null,switch,base,extern,this,false,operator,in,throw,break,finally,out,true,fixed,override,try,case,params,typeof,catch,for,private,foreach,protected,checked,goto,public,unchecked,if,readonly,unsafe,implicit,ref,continue,return,using,virtual,default,interface,sealed,volatile,delegate,public,do,is,sizeof,while,double,lock,stackalloc,else,static,namespace",
             DATATYPES = "bool,object,byte,float,class,uint,char,ulong,ushort,const,decimal,int,sbyte,short,void,long,enum,string";
 
-        public static Dictionary<string, ConsoleColor> GetHighlight(ProgrammingLanguage Language)
+        public static Dictionary<string, Color> GetHighlight(ProgrammingLanguage Language)
         {
-            Dictionary<string, ConsoleColor> SyntaxKeywords = new Dictionary<string, ConsoleColor>();
+            Dictionary<string, Color> SyntaxKeywords = new Dictionary<string, Color>();
 
             switch (Language)
             {
                 case ProgrammingLanguage.CS:
                     {
-                        foreach (string Word in KEYWORDS_CS.Split(',')) SyntaxKeywords.Add(Word, ConsoleColor.DarkBlue);
-                        foreach (string Type in DATATYPES.Split(',')) SyntaxKeywords.Add(Type, ConsoleColor.Blue);
+                        foreach (string Word in KEYWORDS_CS.Split(',')) SyntaxKeywords.Add(Word, Color.DarkBlue);
+                        foreach (string Type in DATATYPES.Split(',')) SyntaxKeywords.Add(Type, Color.Blue);
                         break;
                     }
             }
