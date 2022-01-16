@@ -21,7 +21,7 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
-using static PavlOS.Core.Shell.Utility.Utility;
+using static PavlOS.Core.Shell.Utility.ShellUtil;
 using Convert = Mosa.External.x86.Convert;
 
 namespace PavlOS.Core
@@ -71,8 +71,11 @@ namespace PavlOS.Core
 
                 GraphicsDriver.Graphics.DrawBitFontString("ArialCustomCharset24", Color.White.ToArgb(), "Kernel Panic!", 10, 10, false);
                 GraphicsDriver.Graphics.DrawBitFontString("ArialCustomCharset24", Color.White.ToArgb(), "Message: " + message, 10, 30, false);
+                GraphicsDriver.Graphics.DrawBitFontString("ArialCustomCharset24", Color.White.ToArgb(), "Press ENTER to reboot.", 10, 70, false);
 
                 GraphicsDriver.Graphics.Update();
+
+                if (PS2Keyboard.GetKeyPressed() == KeyCode.Enter) Power.Reboot();
             }
         }
 
@@ -93,63 +96,19 @@ namespace PavlOS.Core
             ShellRenderer.Init();
             PS2Mouse.Initialize(GraphicsDriver.Width, GraphicsDriver.Height);
 
-            int test = 0;
-
             TestWindow window = new TestWindow();
-            
-            window.X = 200;
-            window.Y = 300;
-            window.Width = 200;
-            window.Height = 100;
-            
-            Label label = new Label();
-            label.X = 75;
-            label.Y = 20;
-            label.ForegroundColor = Color.Black;
-            label.Content = "I am a label.";
-
-            window.AddControl(label);
             /*
             Button button = new Button();
-            button.X = 300;
-            button.Y = 100;
-            button.Width = 60;
-            button.Height = 30;
-            button.Content = "Click me!";
+            button.X = 50;
+            button.Y = 200;
+            button.Width = 100;
+            button.Height = 20;
             button.OnClick += (o) =>
             {
-                test++;
-                label.Content = test.ToString();
+                new TestWindow();
             };
             */
-            Button button = new Button();
-            button.X = 10;
-            button.Y = 10;
-            button.Width = 60;
-            button.Height = 30;
-            button.Content = "Click me!";
-            button.OnClick += (o) =>
-            {
-                test++;
-                label.Content = test.ToString();
-            };
-
-            window.AddControl(button);
-
-            Button minus = new Button();
-            minus.X = 10;
-            minus.Y = 45;
-            minus.Width = 60;
-            minus.Height = 30;
-            minus.Content = "Minus";
-            minus.OnClick += (o) =>
-            {
-                test--;
-                label.Content = test.ToString();
-                //window.Center();
-            };
-
-            window.AddControl(minus);
+            //ShellCore.AddSystemControl(button);
 
             //string CustomCharset = "0123456789A�BC��D�E��FGHI�JKLMN�O�PQR�S�T�U��VWXY�Z�a�bc��d�e��fghi�jklmn�o�pqr�s�t�u��vwxy�z�";
             string CustomCharset = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

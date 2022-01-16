@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using static PavlOS.Core.Shell.Utility.Utility;
+using static PavlOS.Core.Shell.Utility.ShellUtil;
 
 namespace PavlOS.Core.Shell.Utility
 {

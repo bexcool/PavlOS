@@ -11,7 +11,7 @@ using System.Text;
 
 namespace PavlOS.Core.Shell.Utility
 {
-    public static class Utility
+    public static class ShellUtil
     {
         public enum Visibility { Visible, Hidden, Collapsed };
         public enum Line { Single, Double, SingleRound, DoubleSingle, SingleDouble};
@@ -20,6 +20,7 @@ namespace PavlOS.Core.Shell.Utility
         public enum Orientation { Horizontal, Vertical };
         public enum ButtonState { Normal, Hovered, Pressed };
         public enum BorderStyle { Sigle, Rounded, None };
+        public enum Cursor { Arrow, HorizontalResize, VerticalResize, DiagonalResize };
     }
 
     public static class SyntaxHighlight

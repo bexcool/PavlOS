@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Text;
-using static PavlOS.Core.Shell.Utility.Utility;
+using static PavlOS.Core.Shell.Utility.ShellUtil;
 
 namespace PavlOS.Core.Shell.Controls.Base
 {
@@ -183,6 +183,23 @@ namespace PavlOS.Core.Shell.Controls.Base
             }
         }
 
+        private string _Tag;
+        public string Tag
+        {
+            get
+            {
+                return _Tag;
+            }
+
+            set
+            {
+                if (!ChangingByCore) _ValueChanged();
+                _Tag = value;
+            }
+        }
+
+        public int IndexZ { get; set; }
+
         public bool ValueChanged = false, ChangingByCore = false, RemoveRequest = false, ParentChanged = false, BlankApplied = true;
         public bool Hovered = false, Pressed = false;
 
@@ -280,7 +297,7 @@ namespace PavlOS.Core.Shell.Controls.Base
         /// </summary>
         public void Remove()
         {
-            ShellCore.RemoveWindow(this);
+            
         }
 
         /// <summary>
